@@ -11,17 +11,31 @@ struct ContentView: View {
         ZStack {
             // Map
             Map {
-                // Camera markers
                 ForEach(alertEngine.cameras) { camera in
+                    // Enforcement zone segment line
+                    MapPolyline(coordinates: [
+                        camera.segmentStartCoordinate,
+                        camera.segmentEndCoordinate
+                    ])
+                    .stroke(zoneColor(for: camera), lineWidth: 5)
+
+                    // Warning radius circle
+                    MapCircle(
+                        center: camera.coordinate,
+                        radius: CameraAlertEngine.approachRadiusMeters
+                    )
+                    .foregroundStyle(zoneColor(for: camera).opacity(0.08))
+                    .stroke(zoneColor(for: camera).opacity(0.3), lineWidth: 1)
+
+                    // Camera marker
                     Marker(
                         camera.street,
                         systemImage: "camera.fill",
                         coordinate: camera.coordinate
                     )
-                    .tint(.red)
+                    .tint(zoneColor(for: camera))
                 }
 
-                // User location
                 UserAnnotation()
             }
             .mapStyle(.standard(pointsOfInterest: .excludingAll))
@@ -144,6 +158,17 @@ struct ContentView: View {
         case .speeding: return .red
         case .nearCamera: return .orange
         case .approaching: return .yellow.opacity(0.9)
+        }
+    }
+
+    private func zoneColor(for camera: SpeedCamera) -> Color {
+        guard let alert = alertEngine.activeAlert, alert.camera.id == camera.id else {
+            return .red
+        }
+        switch alert.level {
+        case .speeding: return .red
+        case .nearCamera: return .orange
+        case .approaching: return .yellow
         }
     }
 

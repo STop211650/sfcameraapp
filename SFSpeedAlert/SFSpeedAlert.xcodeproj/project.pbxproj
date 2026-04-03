@@ -11,6 +11,7 @@
 		6C0EDF08AC09C3561A2F37B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973616A1F33D4A4B0CBC0EDA /* ContentView.swift */; };
 		73CA63571C3204978B4E4161 /* sf_speed_cameras.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DAD6D4917FE7A1B1F4F5E81 /* sf_speed_cameras.json */; };
 		7D5C320DE461B5BB493F3100 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4009BFB77D753A1384BBEDCD /* SettingsView.swift */; };
+		93CFECEB73288D56DFBE0B52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7439F3D8F431DD06A0C8015 /* Assets.xcassets */; };
 		D0FC43E7A0962A9EC3F0954B /* SpeedCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE61D376053A7FAB64F88FA /* SpeedCamera.swift */; };
 		D15CD5F30F85E2CEBDA83877 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719B86F2015632C2F48D20AA /* LocationManager.swift */; };
 		D20616269BAEE731E8F04E30 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A26E11A0770BB33CD554 /* AlertManager.swift */; };
@@ -28,6 +29,7 @@
 		973616A1F33D4A4B0CBC0EDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A69D0D05BA68846238001337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BA9EE0BD80FDE76A9D7767CF /* SFSpeedAlert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SFSpeedAlert.entitlements; sourceTree = "<group>"; };
+		E7439F3D8F431DD06A0C8015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F97317930F6D8E632A5A2E27 /* CameraAlertEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAlertEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +37,7 @@
 		0778D0E5F93F8139EBA0ED2E /* SFSpeedAlert */ = {
 			isa = PBXGroup;
 			children = (
+				E7439F3D8F431DD06A0C8015 /* Assets.xcassets */,
 				BA9EE0BD80FDE76A9D7767CF /* SFSpeedAlert.entitlements */,
 				889E76A4A34E0F78399636B8 /* App */,
 				175CB9C0C2DF79A659B52B79 /* Models */,
@@ -136,6 +139,7 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					D53E85E7CA6F78064EB286B9 = {
+						DevelopmentTeam = 8K4668WLVU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -164,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CFECEB73288D56DFBE0B52 /* Assets.xcassets in Resources */,
 				73CA63571C3204978B4E4161 /* sf_speed_cameras.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +200,8 @@
 				CODE_SIGN_ENTITLEMENTS = SFSpeedAlert/SFSpeedAlert.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K4668WLVU;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = SFSpeedAlert/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -277,6 +284,8 @@
 				CODE_SIGN_ENTITLEMENTS = SFSpeedAlert/SFSpeedAlert.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K4668WLVU;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = SFSpeedAlert/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

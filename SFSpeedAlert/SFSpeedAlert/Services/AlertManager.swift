@@ -102,7 +102,7 @@ final class AlertManager: ObservableObject {
                 content.body += " — Fine: \(fine)"
             }
             content.sound = .defaultCritical
-            content.interruptionLevel = .critical
+            content.interruptionLevel = .timeSensitive
         case .nearCamera:
             content.title = "Speed Camera Zone"
             content.body = "\(camera.street) — Limit \(camera.speedLimitMPH) mph"
